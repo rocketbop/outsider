@@ -1,0 +1,16 @@
+<% if notice %> #don't know what notice is
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Locations</h1>
+
+<h4>Below are locations that have been added to our database.</h4>
+
+<% @locations.each do |location| %> <!-- we created this locations variable it is a array of locations -->
+<div class="entry">
+	<%= image_tag(location.image_url) %>
+	<h3><%= location.title %></h3>
+	<p><%= sanitize(location.description) %></p>
+</div>
+
+<% end %>

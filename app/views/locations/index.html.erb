@@ -1,0 +1,29 @@
+<h1>Listing locations</h1>
+
+<table>
+<% @locations.each do |location| %>
+<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+  <td>
+    <%= image_tag(location.image_url, class: 'list_image') %>
+  </td>
+  <td class="list_description">
+    <dl>
+      <dt><%= location.title %></dt>
+      <dd><%= truncate(strip_tags(location.description), length: 80) %></dd>
+    </dl>
+
+  </td>
+  <td class="list_actions">
+    <%= link_to 'Show', location %><br />
+    <%= link_to 'Edit', edit_location_path(location) %>
+    <%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %>
+    
+  </td>
+</tr>
+<% end %>
+</table>
+<br />
+<%= link_to 'New location', new_location_path %>
+
+
+
