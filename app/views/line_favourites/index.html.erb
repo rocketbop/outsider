@@ -1,0 +1,29 @@
+<h1>Listing line_favourites</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Favorite</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @line_favourites.each do |line_favourite| %>
+      <tr>
+        <td><%= line_favourite.location %></td>
+        <td><%= line_favourite.favorite %></td>
+        <td><%= link_to 'Show', line_favourite %></td>
+        <td><%= link_to 'Edit', edit_line_favourite_path(line_favourite) %></td>
+        <td><%= link_to 'Destroy', line_favourite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Line favourite', new_line_favourite_path %>

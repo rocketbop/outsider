@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @line_favourite.location %>
+</p>
+
+<p>
+  <strong>Favorite:</strong>
+  <%= @line_favourite.favorite %>
+</p>
+
+<%= link_to 'Edit', edit_line_favourite_path(@line_favourite) %> |
+<%= link_to 'Back', line_favourites_path %>

@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140208140546) do
+ActiveRecord::Schema.define(version: 20140209203419) do
+
+  create_table "favourites", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "line_favourites", force: true do |t|
+    t.integer  "location_id"
+    t.integer  "favorite_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "line_favourites", ["favorite_id"], name: "index_line_favourites_on_favorite_id"
+  add_index "line_favourites", ["location_id"], name: "index_line_favourites_on_location_id"
 
   create_table "locations", force: true do |t|
     t.string   "title"

@@ -1,4 +1,8 @@
 Outsider::Application.routes.draw do
+  resources :line_favourites
+
+  resources :favourites
+
   get "planner/index"
   resources :locations
 

@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$dark-blue: 		hsla(250, 20%, 20%, .8);
+$light-blue: 		hsla(220, 80%, 90%, .9);
+$green-blue: 		hsla(180, 70%, 70%, 1);
+$grey: 				hsla(180, 5%, 50%, 1);
+$purple: 			hsl(268, 96%, 64%);
 
 .planner {
 	h1 {
@@ -19,29 +24,31 @@
 		overflow: 		auto;
 		margin-top: 	1em;
 		border-bottom: 	1px dotted #77d;
-		min-height: 	200px;
-	}
-		img {
-		width: 			250px;
-		margin-left: 	100px;
-		margin-right: 	5px;
-		margin-top: 	5px;
-		visibility: 	display;
-		
-	}
+		min-height: 	100px;
 
-	h3 {
-		font-size: 		120%;
-		font-family: 	sans-serif;
-		margin-left: 	100px;
-		margin-top: 	0px;
-		margin-bottom: 	2px;
-		color: 			#227;
-	}
+	
+			img {
+				width: 			150px;
+				margin-right: 	5px;
+				margin-top: 	5px;
+				position: 		relative;
+				float: 			left;
+			
+		}
 
-	p {
-		margin-left: 	100px;
-		margin-top: 	0.5em;
-		margin-top: 	0.8em;
+		h3 {
+			font-size: 		120%;
+			font-family: 	sans-serif;
+			margin-left: 	100px;
+			margin-top: 	0px;
+			margin-bottom: 	2px;
+			color: 			$purple;
+		}
+
+		p {
+			margin-left: 	100px;
+			margin-top: 	0.5em;
+			margin-top: 	0.8em;
+		}
 	}
 }
